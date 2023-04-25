@@ -1,1 +1,38 @@
-1a
+# This is the network config written by 'subiquity'
+network:
+  ethernets:
+    enp37s0f0: {}
+    enp37s0f1: {}
+    enp97s0f0: {}
+    enp97s0f1: {}
+  bonds:
+    bond0:
+      addresses:
+      - 10.0.0.188/24
+      gateway4: 10.0.0.254
+      interfaces:
+      - enp37s0f0
+      - enp37s0f1
+      nameservers:
+        addresses:
+        - 168.126.63.1
+        search: []
+      parameters:
+        lacp-rate: fast
+        mode: 802.3ad
+        transmit-hash-policy: layer2
+    bond1:
+      addresses:
+      - 20.0.0.188/24
+      interfaces:
+      - enp97s0f0
+      - enp97s0f1
+      nameservers:
+        addresses:
+        - 168.126.63.1
+        search: []
+      parameters:
+        lacp-rate: fast
+        mode: 802.3ad
+        transmit-hash-policy: layer2
+  version: 2
